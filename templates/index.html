@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static',filename='main.css')}}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static',filename='bootstrap.min.css')}}"/>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="city-data">
+        <h2 >Enter City</h2>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <input type="text" name="city" placeholder="{{name}}" class="city-field"/>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+    
+            <div class="weather-info">
+                <div class="weather-data">
+                
+                    <p class="temp">{{temp}}&deg;C</p>
+                    <h3 class="day-type ">{{day}}</h3>
+                </div>
+                <div class="weather-logo" >
+                    <img src="http://openweathermap.org/img/w/{{icon}}.png" width="70%" height="70%"/>
+                </div>
+            </div>
+          
+</body>
+</html>
